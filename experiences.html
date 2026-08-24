@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>Experiences & Builder Journal — Romit Yadav on SEO, Failures & Coding</title>
+  <meta name="description" content="Romit Yadav's public journal: honest post-mortems on failed micro-tools, technical SEO case studies, JSON-LD schema deep-dives, and Cloudflare edge deployment guides." />
+  <meta name="keywords" content="technical SEO blog, indie builder journal, web development post-mortem, JSON-LD structured data, Cloudflare Pages, web utility failures, Romit Yadav blog" />
+  <meta name="author" content="Romit Yadav" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://romityadav.com/experiences.html" />
+
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon"             type="image/png" href="https://raw.githubusercontent.com/romitkryadav/romit/main/romitlogo.png" />
+  <link rel="shortcut icon"    type="image/png" href="https://raw.githubusercontent.com/romitkryadav/romit/main/romitlogo.png" />
+  <link rel="apple-touch-icon"                  href="https://raw.githubusercontent.com/romitkryadav/romit/main/romitlogo.png" />
+  <meta name="msapplication-TileImage"         content="https://raw.githubusercontent.com/romitkryadav/romit/main/romitlogo.png" />
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Romit Yadav" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:title"       content="Experiences & Builder Journal — Romit Yadav on SEO, Failures & Coding" />
+  <meta property="og:description" content="Honest post-mortems, technical SEO case studies, and field notes from building web utilities in public." />
+  <meta property="og:url"         content="https://romityadav.com/experiences.html" />
+  <meta property="og:image"       content="https://romityadav.com/assets/og-cover.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"    content="Romit Yadav — Builder Journal" />
+
+  <!-- ═══ TWITTER / X CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@romityadav" />
+  <meta name="twitter:creator"     content="@romityadav" />
+  <meta name="twitter:title"       content="Experiences & Builder Journal — Romit Yadav" />
+  <meta name="twitter:description" content="Honest post-mortems, technical SEO case studies, and field notes from building web utilities in public." />
+  <meta name="twitter:image"       content="https://romityadav.com/assets/og-cover.jpg" />
+
+  <!-- ═══ THEME & APP ═══ -->
+  <meta name="theme-color" content="#0c0c0e" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- ═══ ANTI-FLASH ═══ -->
+  <script>
+    (function(){
+      var s = localStorage.getItem('romit_theme');
+      var dark = s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) document.documentElement.classList.add('dark');
+    })();
+  </script>
+
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ═══ TAILWIND ═══ -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- ═══ ICONS & STYLES ═══ -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ═══ JSON-LD STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://romityadav.com/experiences.html#blog",
+        "url": "https://romityadav.com/experiences.html",
+        "name": "Experiences & Builder Journal — Romit Yadav",
+        "description": "Honest post-mortems, technical SEO discoveries, and field notes from building web utilities in public.",
+        "author": { "@id": "https://romityadav.com/#person" },
+        "inLanguage": "en-US",
+        "isPartOf": { "@id": "https://romityadav.com/#website" }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Why My First 3 Micro-Tools Got Zero Users (And What I Changed)",
+        "description": "Building in a vacuum vs solving sharp pain points — a candid breakdown of early failures.",
+        "author": { "@id": "https://romityadav.com/#person" },
+        "datePublished": "2026-08-10",
+        "url": "https://romityadav.com/experiences.html#why-my-first-three-tools-failed",
+        "isPartOf": { "@id": "https://romityadav.com/experiences.html#blog" },
+        "keywords": ["indie building", "web tools", "product failures", "SEO", "micro-SaaS"]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Demystifying JSON-LD: How Clean Schema Transformed My Search CTR",
+        "description": "Deep-dive into nested schema types, software application markup, and rich snippets.",
+        "author": { "@id": "https://romityadav.com/#person" },
+        "datePublished": "2026-07-28",
+        "url": "https://romityadav.com/experiences.html#demystifying-json-ld-structured-data",
+        "isPartOf": { "@id": "https://romityadav.com/experiences.html#blog" },
+        "keywords": ["JSON-LD", "structured data", "schema.org", "SEO", "rich snippets"]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://romityadav.com/experiences.html#webpage",
+        "url": "https://romityadav.com/experiences.html",
+        "name": "Experiences & Builder Journal — Romit Yadav",
+        "isPartOf": { "@id": "https://romityadav.com/#website" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home",       "item": "https://romityadav.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Experiences","item": "https://romityadav.com/experiences.html" }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-[#faf9f6] dark:bg-[#0c0c0e] text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-sans transition-colors duration-200">
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 w-full border-b border-stone-200/80 dark:border-stone-800/80 bg-[#faf9f6]/85 dark:bg-[#0c0c0e]/85 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-8 h-8 rounded-xl overflow-hidden shadow-xs group-hover:scale-105 transition-transform duration-200 flex-shrink-0">
+          <img src="https://raw.githubusercontent.com/romitkryadav/romit/main/romitlogo.png" alt="Romit Logo" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-bold text-stone-900 dark:text-stone-100 tracking-tight leading-tight">Romit</span>
+          <span class="text-[10px] font-mono text-stone-500 dark:text-stone-400">builder & learner</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1 p-1 rounded-2xl bg-stone-100/80 dark:bg-stone-900/80 border border-stone-200/60 dark:border-stone-800/60">
+        <a href="index.html"       class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">Home</a>
+        <a href="about.html"       class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">About</a>
+        <a href="projects.html"    class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">Projects & Tools</a>
+        <a href="experiences.html" class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-white dark:bg-stone-800 text-stone-900 dark:text-white shadow-xs transition-all">Experiences & Journal</a>
+        <a href="gallery.html"     class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">Photo Gallery</a>
+        <a href="contact.html"     class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">Contact</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all duration-200 shadow-2xs" aria-label="Toggle Dark Mode">
+          <i data-lucide="sun"  class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] text-stone-600 dark:text-stone-300 transition-all" aria-label="Open Menu">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] space-y-1">
+      <a href="index.html"       class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">Home</a>
+      <a href="about.html"       class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">About</a>
+      <a href="projects.html"    class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">Projects & Tools</a>
+      <a href="experiences.html" class="block px-3 py-2 rounded-xl text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30">Experiences & Journal</a>
+      <a href="gallery.html"     class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">Photo Gallery</a>
+      <a href="contact.html"     class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">Contact</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 pt-6 pb-16 space-y-8">
+
+    <!-- Page Header -->
+    <div class="space-y-4 animate-[fadeIn_0.4s_ease_forwards]">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 text-xs font-semibold">
+        <i data-lucide="book-open" class="w-3.5 h-3.5 text-emerald-500"></i>
+        <span>Journal & Public Notes</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 dark:text-stone-100">
+        Experiences, Experiments & Lessons
+      </h1>
+      <p class="text-base text-stone-600 dark:text-stone-300 max-w-2xl leading-relaxed">
+        My personal space for publishing what I'm learning, documenting technical SEO discoveries, analyzing failures, and celebrating builder milestones.
+      </p>
+    </div>
+
+    <!-- Experiences Grid — static HTML for SEO -->
+    <div id="all-experiences-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Article 1 -->
+      <article onclick="openEntry('entry-1')" id="why-my-first-three-tools-failed" class="card-lift group flex flex-col justify-between p-6 rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] hover:border-stone-300 dark:hover:border-stone-700 shadow-2xs transition-all cursor-pointer">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] text-stone-400">
+            <span class="font-semibold text-emerald-600 dark:text-emerald-400">Failures & Lessons</span>
+            <span>Aug 10, 2026 · 4 min read</span>
+          </div>
+          <h2 class="font-bold text-base text-stone-900 dark:text-stone-100 group-hover:text-emerald-600 transition-colors leading-snug">
+            Why My First 3 Micro-Tools Got Zero Users (And What I Changed)
+          </h2>
+          <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed line-clamp-3">
+            Building in a vacuum vs solving sharp pain points. A candid breakdown of why clean code is meaningless if nobody actually searches for the problem.
+          </p>
+          <ul class="text-[11px] text-stone-500 dark:text-stone-400 space-y-1 pt-1">
+            <li class="flex items-start gap-1.5"><span class="text-emerald-500 mt-0.5">›</span> Validate search query intent before writing a single line of code.</li>
+            <li class="flex items-start gap-1.5"><span class="text-emerald-500 mt-0.5">›</span> Focus on high-frequency friction, not one-time tasks.</li>
+            <li class="flex items-start gap-1.5"><span class="text-emerald-500 mt-0.5">›</span> SEO architecture defines product design — not an afterthought.</li>
+          </ul>
+        </div>
+        <div class="pt-4 mt-4 border-t border-stone-100 dark:border-stone-800 flex justify-between items-center text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+          <span>Read Full Entry</span>
+          <span>→</span>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article onclick="openEntry('entry-2')" id="demystifying-json-ld-structured-data" class="card-lift group flex flex-col justify-between p-6 rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] hover:border-stone-300 dark:hover:border-stone-700 shadow-2xs transition-all cursor-pointer">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] text-stone-400">
+            <span class="font-semibold text-emerald-600 dark:text-emerald-400">SEO & Search</span>
+            <span>Jul 28, 2026 · 6 min read</span>
+          </div>
+          <h2 class="font-bold text-base text-stone-900 dark:text-stone-100 group-hover:text-emerald-600 transition-colors leading-snug">
+            Demystifying JSON-LD: How Clean Schema Transformed My Search CTR
+          </h2>
+          <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed line-clamp-3">
+            Deep-dive into nested schema types, software application markup, and rich snippets that help Google understand your web pages unambiguously.
+          </p>
+          <ul class="text-[11px] text-stone-500 dark:text-stone-400 space-y-1 pt-1">
+            <li class="flex items-start gap-1.5"><span class="text-emerald-500 mt-0.5">›</span> Always validate schemas with Google Rich Results Test.</li>
+            <li class="flex items-start gap-1.5"><span class="text-emerald-500 mt-0.5">›</span> Explicitly declare operatingSystem and applicationCategory for software.</li>
+            <li class="flex items-start gap-1.5"><span class="text-emerald-500 mt-0.5">›</span> Connect Person and WebSite nodes with sameAs social vectors.</li>
+          </ul>
+        </div>
+        <div class="pt-4 mt-4 border-t border-stone-100 dark:border-stone-800 flex justify-between items-center text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+          <span>Read Full Entry</span>
+          <span>→</span>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article onclick="openEntry('entry-3')" id="zero-bloat-static-deployments" class="card-lift group flex flex-col justify-between p-6 rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] hover:border-stone-300 dark:hover:border-stone-700 shadow-2xs transition-all cursor-pointer">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between text-[11px] text-stone-400">
+            <span class="font-semibold text-emerald-600 dark:text-emerald-400">Building & Coding</span>
+            <span>Jul 14, 2026 · 5 min read</span>
+          </div>
+          <h2 class="font-bold text-base text-stone-900 dark:text-stone-100 group-hover:text-emerald-600 transition-colors leading-snug">
+            Shipping 100/100 Lighthouse Static Sites on Cloudflare Edge
+          </h2>
+          <p class="text-xs text-stone-600 dark:text-stone-300 leading-relaxed line-clamp-3">
+            Achieving sub-100ms First Contentful Paint by removing runtime client overhead, inlining critical fonts, and leveraging edge caching.
+          </p>
+          <ul class="text-[11px] text-stone-500 dark:text-stone-400 space-y-1 pt-1">
+            <li class="flex items-start gap-1.5"><span class="text-emerald-500 mt-0.5">›</span> Eliminate heavy dependencies when standard browser APIs suffice.</li>
+            <li class="flex items-start gap-1.5"><span class="text-emerald-500 mt-0.5">›</span> Use immutable cache-control headers for fingerprinted assets.</li>
+            <li class="flex items-start gap-1.5"><span class="text-emerald-500 mt-0.5">›</span> Pre-render static HTML so users never wait on client JS rendering.</li>
+          </ul>
+        </div>
+        <div class="pt-4 mt-4 border-t border-stone-100 dark:border-stone-800 flex justify-between items-center text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+          <span>Read Full Entry</span>
+          <span>→</span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Hidden article data for modal -->
+    <template id="entry-1">
+      <div class="space-y-2 border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Failures & Lessons · Aug 10, 2026</span>
+        <h1 class="text-2xl font-bold text-stone-900 dark:text-stone-100 leading-snug">Why My First 3 Micro-Tools Got Zero Users (And What I Changed)</h1>
+        <p class="italic text-stone-500 dark:text-stone-400 font-serif text-sm">"Building in a vacuum vs solving sharp pain points."</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/30 space-y-2">
+        <p class="text-xs font-bold text-amber-900 dark:text-amber-200">Key Takeaways</p>
+        <ul class="text-xs text-amber-800 dark:text-amber-300 space-y-1.5 list-disc list-inside">
+          <li>Validate search query intent before writing a single line of React code.</li>
+          <li>A utility that saves 5 seconds once a month has low retention — focus on high-frequency friction.</li>
+          <li>Distribution and SEO architecture are not afterthoughts — they define product design.</li>
+        </ul>
+      </div>
+      <div class="text-sm text-stone-700 dark:text-stone-300 leading-relaxed space-y-4">
+        <p>When I built my first three utilities, I spent weeks tweaking animations and perfecting state trees. But after launching, total visitors numbered in the single digits.</p>
+        <p>Here is what went wrong:</p>
+        <ol class="list-decimal list-inside space-y-2 pl-2">
+          <li>I built features I found fun, rather than utilities people were actively Googling for.</li>
+          <li>I neglected basic keyword research and programmatic page titles.</li>
+          <li>I didn't provide immediate value without requiring signups.</li>
+        </ol>
+        <p>After refactoring my mindset towards technical SEO and immediate utility value, my tools started finding organic traction. The lesson: validate demand first, build second.</p>
+      </div>
+    </template>
+
+    <template id="entry-2">
+      <div class="space-y-2 border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">SEO & Search · Jul 28, 2026</span>
+        <h1 class="text-2xl font-bold text-stone-900 dark:text-stone-100 leading-snug">Demystifying JSON-LD: How Clean Schema Transformed My Search CTR</h1>
+        <p class="italic text-stone-500 dark:text-stone-400 font-serif text-sm">"Rich snippets aren't magic — they're structured communication."</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/30 space-y-2">
+        <p class="text-xs font-bold text-amber-900 dark:text-amber-200">Key Takeaways</p>
+        <ul class="text-xs text-amber-800 dark:text-amber-300 space-y-1.5 list-disc list-inside">
+          <li>Always validate schemas with Google Rich Results Test.</li>
+          <li>Explicitly declare operatingSystem, applicationCategory, and offers for software.</li>
+          <li>Connect Person and WebSite nodes with clear sameAs social vectors.</li>
+        </ul>
+      </div>
+      <div class="text-sm text-stone-700 dark:text-stone-300 leading-relaxed space-y-4">
+        <p>Structured data acts as direct semantic context for search engine crawlers. Before implementing JSON-LD, my tools ranked for generic terms with no rich result enhancements.</p>
+        <p>By providing well-structured JSON-LD graphs — linking Person, WebSite, SoftwareApplication, and BreadcrumbList nodes — search engines generated rich result cards with review badges and software tags.</p>
+        <p>The result was a measurable boost in click-through rates, especially on mobile SERPs where rich cards dominate the visible area. The key insight: don't just add schema, build a connected graph.</p>
+      </div>
+    </template>
+
+    <template id="entry-3">
+      <div class="space-y-2 border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Building & Coding · Jul 14, 2026</span>
+        <h1 class="text-2xl font-bold text-stone-900 dark:text-stone-100 leading-snug">Shipping 100/100 Lighthouse Static Sites on Cloudflare Edge</h1>
+        <p class="italic text-stone-500 dark:text-stone-400 font-serif text-sm">"Speed is a feature, not an optimization."</p>
+      </div>
+      <div class="p-4 rounded-2xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/30 space-y-2">
+        <p class="text-xs font-bold text-amber-900 dark:text-amber-200">Key Takeaways</p>
+        <ul class="text-xs text-amber-800 dark:text-amber-300 space-y-1.5 list-disc list-inside">
+          <li>Eliminate heavy dependencies when standard browser APIs suffice.</li>
+          <li>Use immutable cache-control headers for fingerprinted assets.</li>
+          <li>Pre-render static HTML so users never wait on client JavaScript rendering.</li>
+        </ul>
+      </div>
+      <div class="text-sm text-stone-700 dark:text-stone-300 leading-relaxed space-y-4">
+        <p>Users judge website speed in milliseconds. A 200ms delay is imperceptible; a 2-second delay drives 40% of visitors away. This is why performance isn't something I bolt on at the end.</p>
+        <p>My stack: plain HTML + Tailwind CDN (only what's used), no SSR framework, no heavy client bundles. Deployed to Cloudflare Pages with edge distribution across 300+ locations.</p>
+        <p>Critical techniques: inline critical CSS, preconnect to font origins, use <code class="font-mono bg-stone-100 dark:bg-stone-800 px-1 rounded">loading="lazy"</code> on all below-fold images, and set <code class="font-mono bg-stone-100 dark:bg-stone-800 px-1 rounded">Cache-Control: public, max-age=31536000, immutable</code> on fingerprinted assets. The result: consistent 100/100 across all four Lighthouse categories.</p>
+      </div>
+    </template>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] py-8 text-xs text-stone-500 dark:text-stone-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Romit. Built with passion & clean web craft.</p>
+      <div class="flex items-center gap-4">
+        <a href="index.html"       class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="about.html"       class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">About</a>
+        <a href="projects.html"    class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Projects</a>
+        <a href="experiences.html" class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Journal</a>
+        <a href="gallery.html"     class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Gallery</a>
+        <a href="contact.html"     class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Article Modal -->
+  <div id="article-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm items-center justify-center p-4">
+    <div data-modal-box class="relative w-full max-w-3xl bg-white dark:bg-[#141417] rounded-3xl border border-stone-200 dark:border-stone-800 p-6 sm:p-10 space-y-6 max-h-[92vh] overflow-y-auto">
+      <button id="close-article-modal" class="absolute top-5 right-5 p-2 rounded-lg text-stone-400 hover:text-stone-900 dark:hover:text-white transition-colors hover:bg-stone-100 dark:hover:bg-stone-800" aria-label="Close Article">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="modal-article-content" class="space-y-4"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO ═══ -->
+  <title>Romit Kr Yadav - Indie Web Developer & SEO Enthusiast</title>
+  <meta name="description" content="Romit Kr Yadav's personal website. I build fast, zero-bloat web utilities, document technical SEO experiments, and share honest lessons from indie building in public." />
+  <meta name="keywords" content="Romit Kr Yadav, web developer, SEO tools, web utilities, indie builder, technical SEO, TypeScript, Tailwind CSS, Cloudflare Pages" />
+  <meta name="author" content="Romit Kr Yadav" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://romitkryadav.fbviddl.com/" />
+
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon"             type="image/png" href="https://romitkryadav.fbviddl.com/romitlogo.png" />
+  <link rel="shortcut icon"    type="image/png" href="https://romitkryadav.fbviddl.com/romitlogo.png" />
+  <link rel="apple-touch-icon"                  href="https://romitkryadav.fbviddl.com/romitlogo.png" />
+  <meta name="msapplication-TileImage"         content="https://romitkryadav.fbviddl.com/romitlogo.png" />
+
+  <!-- ═══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="Romit Kr Yadav" />
+  <meta property="og:locale"      content="en_US" />
+  <meta property="og:title"       content="Romit Kr Yadav - Indie Web Developer & SEO Enthusiast" />
+  <meta property="og:description" content="I build fast, zero-bloat web utilities, document technical SEO experiments, and share honest lessons from indie building in public." />
+  <meta property="og:url"         content="https://romitkryadav.fbviddl.com/" />
+  <meta property="og:image"       content="https://romitkryadav.fbviddl.com/assets/og-cover.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"    content="Romit Kr Yadav — Web Builder & SEO Enthusiast" />
+
+  <!-- ═══ TWITTER / X CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@romitkryadav" />
+  <meta name="twitter:creator"     content="@romitkryadav" />
+  <meta name="twitter:title"       content="Romit Kr Yadav - Indie Web Developer & SEO Enthusiast" />
+  <meta name="twitter:description" content="I build fast, zero-bloat web utilities, document technical SEO experiments, and share honest lessons from indie building in public." />
+  <meta name="twitter:image"       content="https://romitkryadav.fbviddl.com/assets/og-cover.jpg" />
+  <meta name="twitter:image:alt"   content="Romit Kr Yadav - Indie Web Developer & SEO Enthusiast" />
+
+  <!-- ═══ THEME & APP ═══ -->
+  <meta name="theme-color" content="#0c0c0e" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#faf9f6" media="(prefers-color-scheme: light)" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="generator" content="Hand-crafted HTML" />
+
+  <!-- ═══ ANTI-FLASH: dark class before first paint ═══ -->
+  <script>
+    (function(){
+      var s = localStorage.getItem('romit_theme');
+      var dark = s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (dark) document.documentElement.classList.add('dark');
+    })();
+  </script>
+
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ═══ TAILWIND ═══ -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- ═══ ICONS & STYLES ═══ -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- ═══ JSON-LD STRUCTURED DATA ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://romitkryadav.fbviddl.com/#person",
+        "name": "Romit Kr Yadav",
+        "alternateName": "Romit",
+        "jobTitle": "Web Builder & Technical SEO Enthusiast",
+        "description": "Indie web builder who creates zero-bloat browser utilities, studies technical SEO, and publishes honest builder experiments.",
+        "url": "https://romitkryadav.fbviddl.com",
+        "email": "romitkryadav@proton.me",
+        "image": "https://romitkryadav.fbviddl.com/assets/romit-profile.jpg",
+        "sameAs": [
+          "https://github.com/romityadav",
+          "https://twitter.com/romitkryadav",
+          "https://linkedin.com/in/romitkryadav",
+          "https://instagram.com/romitkryadav"
+        ],
+        "knowsAbout": ["Technical SEO", "TypeScript", "Web Performance", "Tailwind CSS", "Cloudflare Pages", "JSON-LD Schema"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://romitkryadav.fbviddl.com/#website",
+        "url": "https://romitkryadav.fbviddl.com",
+        "name": "Romit Kr Yadav",
+        "description": "Personal website of Romit Kr Yadav — web utilities, SEO experiments, and builder notes.",
+        "author": { "@id": "https://romitkryadav.fbviddl.com/#person" },
+        "inLanguage": "en-US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://romitkryadav.fbviddl.com/projects.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://romitkryadav.fbviddl.com/#webpage",
+        "url": "https://romitkryadav.fbviddl.com/",
+        "name": "Romit Kr Yadav — Web Builder, SEO Enthusiast & Indie Utility Maker",
+        "description": "I build fast, zero-bloat web utilities, document technical SEO experiments, and share honest lessons from indie building in public.",
+        "isPartOf": { "@id": "https://romitkryadav.fbviddl.com/#website" },
+        "about": { "@id": "https://romitkryadav.fbviddl.com/#person" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://romitkryadav.fbviddl.com/" }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-[#faf9f6] dark:bg-[#0c0c0e] text-stone-800 dark:text-stone-200 min-h-screen flex flex-col font-sans transition-colors duration-200">
+
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-40 w-full border-b border-stone-200/80 dark:border-stone-800/80 bg-[#faf9f6]/85 dark:bg-[#0c0c0e]/85 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+
+      <!-- Brand Logo -->
+      <a href="/" class="flex items-center gap-2.5 group">
+        <div class="w-8 h-8 rounded-xl overflow-hidden shadow-xs group-hover:scale-105 transition-transform duration-200 flex-shrink-0">
+          <img src="https://romitkryadav.fbviddl.com/romitlogo.png" alt="Romit Logo" class="w-full h-full object-cover" />
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-bold text-stone-900 dark:text-stone-100 tracking-tight leading-tight">Romit</span>
+          <span class="text-[10px] font-mono text-stone-500 dark:text-stone-400">builder & learner</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-1 p-1 rounded-2xl bg-stone-100/80 dark:bg-stone-900/80 border border-stone-200/60 dark:border-stone-800/60">
+        <a href="/"       class="px-3 py-1.5 rounded-xl text-xs font-semibold bg-white dark:bg-stone-800 text-stone-900 dark:text-white shadow-xs transition-all">Home</a>
+        <a href="/about"       class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">About</a>
+        <a href="/projects"    class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">Projects & Tools</a>
+        <a href="/experiences" class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">Experiences & Journal</a>
+        <a href="/gallery"     class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">Photo Gallery</a>
+        <a href="/contact"     class="px-3 py-1.5 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:bg-white/60 dark:hover:bg-stone-800/60 transition-all">Contact</a>
+      </nav>
+
+      <!-- Right Controls -->
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" class="p-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-all duration-200 shadow-2xs" aria-label="Toggle Dark Mode">
+          <i data-lucide="sun"  class="w-4 h-4 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-4 h-4 block dark:hidden"></i>
+        </button>
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] text-stone-600 dark:text-stone-300 transition-all" aria-label="Open Menu">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 border-b border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] space-y-1">
+      <a href="/"       class="block px-3 py-2 rounded-xl text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/30">Home</a>
+      <a href="/about"       class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">About</a>
+      <a href="/projects"    class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">Projects & Tools</a>
+      <a href="/experiences" class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">Experiences & Journal</a>
+      <a href="/gallery"     class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">Photo Gallery</a>
+      <a href="/contact"     class="block px-3 py-2 rounded-xl text-xs font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">Contact</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="page-view flex-1 max-w-6xl w-full mx-auto px-4 sm:px-6 pt-6 pb-16 space-y-16">
+
+    <!-- Hero Section -->
+    <section class="relative pt-6 sm:pt-10 pb-4">
+      <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+
+        <!-- Left: Text Content -->
+        <div class="flex-1 space-y-6">
+
+          <!-- Availability badge -->
+          <div class="hero-line float-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-medium shadow-2xs">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-ring"></span>
+            <span>Available for collaborations & web projects</span>
+          </div>
+
+          <h1 class="hero-line text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-900 dark:text-stone-50 leading-[1.1]">
+            Hi, I'm <span class="underline decoration-emerald-500/40 decoration-4 underline-offset-4">Romit</span>.<br />
+            I build things, learn in public, and document the journey.
+          </h1>
+
+          <p class="hero-line text-base sm:text-lg text-stone-600 dark:text-stone-300 leading-relaxed font-serif">
+            Welcome to my personal corner on the internet. I craft independent web utilities, share technical SEO discoveries, analyze coding experiments, and share real stories from building on the open web.
+          </p>
+
+          <div class="hero-line flex flex-wrap items-center gap-3 pt-2">
+            <a href="/projects" class="btn-ripple inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 font-semibold text-xs shadow-sm hover:opacity-90 transition-opacity">
+              <span>Explore My Tools & Projects</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <a href="/about" class="btn-ripple inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-stone-300 dark:border-stone-700 bg-white dark:bg-[#141417] text-stone-700 dark:text-stone-200 font-semibold text-xs shadow-2xs hover:bg-stone-50 dark:hover:bg-stone-800 transition-colors">
+              <span>About My Journey</span>
+            </a>
+          </div>
+
+          <!-- Social Media Links -->
+          <div class="hero-line flex items-center gap-1 pt-1">
+            <span class="text-[11px] text-stone-400 dark:text-stone-500 mr-1.5 font-medium">Find me on</span>
+
+            <!-- GitHub -->
+            <a href="https://github.com/romitkryadav" target="_blank" rel="noopener noreferrer"
+               aria-label="GitHub"
+               class="group p-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:border-stone-400 dark:hover:border-stone-600 hover:scale-110 transition-all duration-200 shadow-2xs">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.76-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23A11.51 11.51 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+
+            <!-- X / Twitter -->
+            <a href="https://twitter.com/romitkryadav" target="_blank" rel="noopener noreferrer"
+               aria-label="X (Twitter)"
+               class="group p-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white hover:border-stone-400 dark:hover:border-stone-600 hover:scale-110 transition-all duration-200 shadow-2xs">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.912-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/romitkryadav" target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram"
+               class="group p-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] text-stone-500 dark:text-stone-400 hover:text-pink-500 dark:hover:text-pink-400 hover:border-pink-300 dark:hover:border-pink-700 hover:scale-110 transition-all duration-200 shadow-2xs">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/in/romitkryadav" target="_blank" rel="noopener noreferrer"
+               aria-label="LinkedIn"
+               class="group p-2 rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] text-stone-500 dark:text-stone-400 hover:text-blue-600 dark:hover:text-blue-400 hover:border-blue-300 dark:hover:border-blue-700 hover:scale-110 transition-all duration-200 shadow-2xs">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Profile Card -->
+        <div class="hero-line flex-shrink-0 w-64 sm:w-72">
+          <div class="relative rounded-3xl overflow-hidden border border-stone-200 dark:border-stone-700/60 shadow-2xl bg-gradient-to-b from-stone-800 to-stone-950 dark:from-[#1a1a2e] dark:to-[#0c0c0e]">
+
+            <!-- Photo area -->
+            <div class="relative aspect-[3/4] overflow-hidden">
+              <!-- Replace the src below with your own photo path, e.g. src="assets/romit.jpg" -->
+              <img
+                src="https://fbviddl.com/romitkryadav.png" alt="Romit Kr Yadav"
+                alt="Romit — Web Builder & SEO Learner"
+                class="w-full h-full object-cover object-top"
+              />
+              <!-- Gradient overlay at bottom -->
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/20 to-transparent"></div>
+
+             
+
+              <!-- Name & title overlay -->
+              <div class="absolute bottom-0 left-0 right-0 p-4 space-y-0.5">
+                <p class="text-sm font-bold text-white leading-tight">Romit Kr Yadav</p>
+                <p class="text-[11px] text-stone-300">Web Builder & SEO Learner</p>
+              </div>
+            </div>
+
+            <!-- Quote strip -->
+            <div class="px-4 py-3 bg-stone-900/80 dark:bg-[#0f0f14]">
+              <p class="text-[11px] text-stone-400 font-serif italic text-center leading-relaxed">
+                "Turning small ideas into lightweight, discoverable web tools."
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- What I'm Building Now -->
+    <section class="reveal p-6 sm:p-8 rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] shadow-2xs space-y-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-stone-900 dark:text-stone-100">What I'm Building & Focusing on Now</h2>
+        </div>
+        <span class="text-xs font-mono text-stone-400">August 2026</span>
+      </div>
+      <div class="stagger-children grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+        <div class="p-4 rounded-2xl bg-stone-50 dark:bg-[#18181c] border border-stone-100 dark:border-stone-800/80 space-y-1.5 transition-all hover:border-emerald-500/30 hover:shadow-sm">
+          <p class="font-bold text-stone-900 dark:text-stone-100 flex items-center gap-1.5">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-emerald-500"></i>
+            SEO Content Analysis
+          </p>
+          <p class="text-stone-500 dark:text-stone-400 leading-relaxed">Analyzing content for SEO optimization and identifying opportunities for improvement.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-stone-50 dark:bg-[#18181c] border border-stone-100 dark:border-stone-800/80 space-y-1.5 transition-all hover:border-indigo-500/30 hover:shadow-sm">
+          <p class="font-bold text-stone-900 dark:text-stone-100 flex items-center gap-1.5">
+            <i data-lucide="book-open" class="w-3.5 h-3.5 text-indigo-500"></i>
+            Building self-hosted micro-tools
+          </p>
+          <p class="text-stone-500 dark:text-stone-400 leading-relaxed">I focusing on Micro-tools that can be self-hosted and provide real value.</p>
+        </div>
+        <div class="p-4 rounded-2xl bg-stone-50 dark:bg-[#18181c] border border-stone-100 dark:border-stone-800/80 space-y-1.5 transition-all hover:border-amber-500/30 hover:shadow-sm">
+          <p class="font-bold text-stone-900 dark:text-stone-100 flex items-center gap-1.5">
+            <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i>
+            Building and improving Self Personality
+          </p>
+          <p class="text-stone-500 dark:text-stone-400 leading-relaxed">Focusing on My personal development and self-awareness.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="space-y-6">
+      <div class="reveal flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-stone-900 dark:text-stone-100">Featured Web Tools</h2>
+          <p class="text-xs text-stone-500 dark:text-stone-400">Utilities built to solve real Problems and SEO bottlenecks</p>
+        </div>
+        <a href="projects.html" class="link-underline text-xs font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1 hover:gap-2 transition-all">
+          <span>View All Projects</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+      <div id="home-featured-projects" class="stagger-children grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- MetaTagLens -->
+        <article class="card-lift group flex flex-col justify-between bg-white dark:bg-[#141417] rounded-3xl border border-stone-200 dark:border-stone-800 hover:border-stone-300 dark:hover:border-stone-700 shadow-2xs overflow-hidden">
+          <div class="img-zoom relative aspect-video overflow-hidden bg-stone-100 dark:bg-stone-900">
+            <img src="https://romitkryadav.fbviddl.com/projects/threadsgrab-project.png" alt="ThreadsGrab project" class="w-full h-full object-cover" loading="lazy" />
+            <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/90 dark:bg-black/80 text-stone-800 dark:text-stone-200">Web Utility</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 group-hover:text-emerald-600 transition-colors">ThreadsGrab</h3>
+              <p class="text-xs text-stone-600 dark:text-stone-300 line-clamp-2 mt-1">A Downloader Tool for Meta Threads to save users' favorite posts and media and view and count their followers live.</p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+              <a href="/projects" class="text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-stone-900 transition-colors">Details</a>
+              <a href="https://threadsgrab.com" target="_blank" rel="noopener noreferrer" class="btn-ripple px-3 py-1.5 rounded-xl bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 text-xs font-semibold">Visit</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- CleanSlug Engine -->
+        <article class="card-lift group flex flex-col justify-between bg-white dark:bg-[#141417] rounded-3xl border border-stone-200 dark:border-stone-800 hover:border-stone-300 dark:hover:border-stone-700 shadow-2xs overflow-hidden">
+          <div class="img-zoom relative aspect-video overflow-hidden bg-stone-100 dark:bg-stone-900">
+            <img src="https://romitkryadav.fbviddl.com/projects/fbviddl-project.png" alt="CleanSlug Engine project" class="w-full h-full object-cover" loading="lazy" />
+            <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/90 dark:bg-black/80 text-stone-800 dark:text-stone-200">Web Utility</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 group-hover:text-emerald-600 transition-colors">FBViddl</h3>
+              <p class="text-xs text-stone-600 dark:text-stone-300 line-clamp-2 mt-1">This is also a Downloader Tool for Facebook Videos to save users' favorite videos and view their details and statistics.</p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+              <a href="/projects" class="text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-stone-900 transition-colors">Details</a>
+              <a href="https://fbviddl.com" target="_blank" rel="noopener noreferrer" class="btn-ripple px-3 py-1.5 rounded-xl bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 text-xs font-semibold">Visit</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- VectorPath Mini -->
+        <article class="card-lift group flex flex-col justify-between bg-white dark:bg-[#141417] rounded-3xl border border-stone-200 dark:border-stone-800 hover:border-stone-300 dark:hover:border-stone-700 shadow-2xs overflow-hidden">
+          <div class="img-zoom relative aspect-video overflow-hidden bg-stone-100 dark:bg-stone-900">
+            <img src="https://romitkryadav.fbviddl.com/projects/dtsave.jpg" alt="DTSave project" class="w-full h-full object-cover" loading="lazy" />
+            <span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/90 dark:bg-black/80 text-stone-800 dark:text-stone-200">Web Tool</span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 group-hover:text-emerald-600 transition-colors">DTSave</h3>
+              <p class="text-xs text-stone-600 dark:text-stone-300 line-clamp-2 mt-1">A multi-web utility for downloading and static analysis of web content. Loading...</p>
+            </div>
+            <div class="pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
+              <a href="/projects" class="text-xs font-semibold text-stone-700 dark:text-stone-300 hover:text-stone-900 transition-colors">Details</a>
+              <a href="/projects/#dtsave" target="_blank" rel="noopener noreferrer" class="btn-ripple px-3 py-1.5 rounded-xl bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 text-xs font-semibold">Visit</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Recent Experiences -->
+    <section class="space-y-6">
+      <div class="reveal flex items-center justify-between">
+        <div>
+          <h2 class="text-2xl font-bold text-stone-900 dark:text-stone-100">Recent Stories & Insights</h2>
+          <p class="text-xs text-stone-500 dark:text-stone-400">Field notes on coding, SEO, experiments, and lessons</p>
+        </div>
+        <a href="experiences.html" class="link-underline text-xs font-semibold text-emerald-600 dark:text-emerald-400 flex items-center gap-1 hover:gap-2 transition-all">
+          <span>Read All Entries</span>
+          <i data-lucide="arrow-right" class="w-3 h-3"></i>
+        </a>
+      </div>
+      <div id="home-recent-experiences" class="stagger-children grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Entry 1: Why My First 3 Tools Failed -->
+        <article class="card-lift group cursor-pointer p-6 rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] hover:border-stone-300 dark:hover:border-stone-700 shadow-2xs space-y-3 transition-all">
+          <div class="flex items-center justify-between text-[11px] text-stone-400">
+            <span class="font-semibold text-emerald-600 dark:text-emerald-400">Failures & Lessons</span>
+            <span>4 min read</span>
+          </div>
+          <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 group-hover:text-emerald-600 transition-colors leading-snug">Why My First Project Failed and What I Learned</h3>
+          <p class="text-xs text-stone-600 dark:text-stone-300 line-clamp-2">Building things is easier than building the right things. Here's what I learned from my first major project failure.</p>
+          <div class="pt-2 border-t border-stone-100 dark:border-stone-800">
+            <a href="experiences.html" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Read full entry →</a>
+          </div>
+        </article>
+
+        <!-- Entry 2: JSON-LD -->
+        <article class="card-lift group cursor-pointer p-6 rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] hover:border-stone-300 dark:hover:border-stone-700 shadow-2xs space-y-3 transition-all">
+          <div class="flex items-center justify-between text-[11px] text-stone-400">
+            <span class="font-semibold text-emerald-600 dark:text-emerald-400">SEO & Search</span>
+            <span>6 min read</span>
+          </div>
+          <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 group-hover:text-emerald-600 transition-colors leading-snug">I thought that building a product was just about writing code</h3>
+          <p class="text-xs text-stone-600 dark:text-stone-300 line-clamp-2">My initial assumption was that a successful product was simply a well-coded one. Here's what I learned about the real factors behind product success.</p>
+          <div class="pt-2 border-t border-stone-100 dark:border-stone-800">
+            <a href="/experiences" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Read full entry →</a>
+          </div>
+        </article>
+
+        <!-- Entry 3: Lighthouse 100 -->
+        <article class="card-lift group cursor-pointer p-6 rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] hover:border-stone-300 dark:hover:border-stone-700 shadow-2xs space-y-3 transition-all">
+          <div class="flex items-center justify-between text-[11px] text-stone-400">
+            <span class="font-semibold text-emerald-600 dark:text-emerald-400">Deploy Web Apps</span>
+            <span>5 min read</span>
+          </div>
+          <h3 class="font-bold text-base text-stone-900 dark:text-stone-100 group-hover:text-emerald-600 transition-colors leading-snug">My thought was wrong about hosting a web application on internet.</h3>
+          <p class="text-xs text-stone-600 dark:text-stone-300 line-clamp-2">I was thought that for hosting a website on internet, I needed a powerful server and expensive infrastructure.</p>
+          <div class="pt-2 border-t border-stone-100 dark:border-stone-800">
+            <a href="/experiences" class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Read full entry →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-stone-200 dark:border-stone-800 bg-white dark:bg-[#141417] py-8 text-xs text-stone-500 dark:text-stone-400">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Romit. Built with passion & clean web craft.</p>
+      <div class="flex items-center gap-4">
+        <a href="/index.html"       class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Home</a>
+        <a href="/about.html"       class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">About</a>
+        <a href="/projects.html"    class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Projects</a>
+        <a href="/experiences.html" class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Journal</a>
+        <a href="/gallery.html"     class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Gallery</a>
+        <a href="/contact.html"     class="link-underline hover:text-stone-900 dark:hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm items-center justify-center p-4">
+    <div data-modal-box class="relative w-full max-w-2xl bg-white dark:bg-[#141417] rounded-3xl border border-stone-200 dark:border-stone-800 p-6 sm:p-8 space-y-4 max-h-[90vh] overflow-y-auto">
+      <button id="close-project-modal" class="absolute top-4 right-4 p-2 rounded-lg text-stone-400 hover:text-stone-900 dark:hover:text-white transition-colors hover:bg-stone-100 dark:hover:bg-stone-800" aria-label="Close Modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="modal-project-content" class="space-y-4 text-xs"></div>
+    </div>
+  </div>
+
+  <!-- Article Modal -->
+  <div id="article-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm items-center justify-center p-4">
+    <div data-modal-box class="relative w-full max-w-3xl bg-white dark:bg-[#141417] rounded-3xl border border-stone-200 dark:border-stone-800 p-6 sm:p-10 space-y-6 max-h-[92vh] overflow-y-auto">
+      <button id="close-article-modal" class="absolute top-5 right-5 p-2 rounded-lg text-stone-400 hover:text-stone-900 dark:hover:text-white transition-colors hover:bg-stone-100 dark:hover:bg-stone-800" aria-label="Close Article">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="modal-article-content" class="space-y-4"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
